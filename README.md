@@ -3,7 +3,15 @@
 
 ## Installation
 
-* Clone the repository, replace <institution> with the actual name of your institution
+#Ansible
+* Install the latest version of ansible
+$ sudo apt-get update
+$ sudo apt-get install software-properties-common
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt-get update
+$ sudo apt-get install ansible
+
+* Clone the repository, replace <institution> with the actual name of your institution e.g muk, kyu, renu, umu
 
         git clone  https://github.com/ubuntunet/unIDa_LDAP.git <institution>-ldap
         cd <institution>-ldap
@@ -42,7 +50,7 @@ There are many ways to create random passwords/passphrases/salt, I prefer to use
 
 ### Run the playbook
 
-        ansible-playbook -i inventories/<institution> ldap.yml 
+        ansible-playbook -i inventories/<institution> ldap.yml
 
 
 
@@ -84,4 +92,3 @@ sudo aptitude purge slapd
 sudo rm /etc/ldap/rootdn_created
 sudo rm /root/.entriesadded
 ```
-
