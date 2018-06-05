@@ -5,10 +5,9 @@
     - php-zip
 
 - name: Download LDAP Account Manager (LAM)
-  get_url: > 
-    url=http://downloads.sourceforge.net/project/lam/LAM/5.4/ldap-account-manager_5.4-1_all.deb
+  get_url: >
+    url=http://sourceforge.net/projects/lam/files/LAM/6.3/ldap-account-manager_6.3-1_all.deb
     dest=/opt
 
-- name: Install LAM
-  command: dpkg -i ldap-account-manager_5.4-1_all.deb chdir=/opt
-
+- name: Install LAM 6.3
+  command: dpkg -i ldap-account-manager_6.3-1_all.deb chdir=/opt

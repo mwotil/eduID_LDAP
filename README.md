@@ -3,13 +3,44 @@
 
 ## Installation
 
-#Ansible
-* Install the latest version of ansible
-$ sudo apt-get update
-$ sudo apt-get install software-properties-common
-$ sudo apt-add-repository ppa:ansible/ansible
-$ sudo apt-get update
-$ sudo apt-get install ansible
+# Initial Steps
+
+    * Ensure the repos are refreshed and all installed packages are updated
+      $ sudo apt-get update && sudo apt-get upgrade -y
+
+    * Reboot the server
+      $ sudo reboot
+
+    * Login again as Ubuntu to the server, and enter the root prompt with the command below:
+      $ sudo -I
+
+    * Generate the SSH keys (Go with the defaults)
+
+      # ssh-keygen -t rsa
+
+    * Enable password less login for the ubuntu user
+      # visudo
+
+    * Add the following line to the file
+      ubuntu ALL=(ALL) NOPASSWD:ALL
+
+    * Exit the root prompt and as the ubuntu user; For keygen, use the defaults
+      $ ssh-keygen -t rsa
+      $ ssh-copy-id ubuntu@localhost (This will prompt you for the ubuntu user password)
+
+
+# Install ansible
+
+  $ sudo apt-get update
+  $ sudo apt-get install software-properties-common
+  $ sudo apt-add-repository ppa:ansible/ansible
+  $ sudo apt-get update
+  $ sudo apt-get install ansible
+
+# Install PHP modules
+  $ sudo apt-get install php php-ldap php-gd php-json php-imagick apache2
+  $ sudo apt-get -f install
+
 
 * Clone the repository, replace <institution> with the actual name of your institution e.g muk, kyu, renu, umu
 
@@ -61,14 +92,6 @@ The following ports need to be in order for LDAP/S to work properly:
 TCP 389
 TCP 636
 ```
-
-### Deploy locally with Vagrant
-
-If you want to try it out locally, and you have Vagrant/Virtualbox installed, the following command will run the playbook using the development inventory/variabels.
-
-        vagrant up --provision
-
-
 
 ----
 
