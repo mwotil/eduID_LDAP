@@ -8,11 +8,14 @@
     * Ensure the repos are refreshed and all installed packages are updated
       $ sudo apt-get update && sudo apt-get upgrade -y
 
+    * Add a user ubuntu with administrative roles
+      $ sudo adduser ubuntu
+
     * Reboot the server
       $ sudo reboot
 
     * Login again as Ubuntu to the server, and enter the root prompt with the command below:
-      $ sudo -I
+      $ sudo -i
 
     * Generate the SSH keys (Go with the defaults)
 
@@ -30,16 +33,17 @@
 
 
 # Install ansible
-
-  $ sudo apt-get update
-  $ sudo apt-get install software-properties-common
-  $ sudo apt-add-repository ppa:ansible/ansible
-  $ sudo apt-get update
-  $ sudo apt-get install ansible
+    *
+      $ sudo apt-get update
+      $ sudo apt-get install software-properties-common
+      $ sudo apt-add-repository ppa:ansible/ansible
+      $ sudo apt-get update
+      $ sudo apt-get install ansible
 
 # Install PHP modules
-  $ sudo apt-get install php php-ldap php-gd php-json php-imagick apache2
-  $ sudo apt-get -f install
+    *
+      $ sudo apt-get install php php-ldap php-gd php-json php-imagick apache2
+      $ sudo apt-get -f install
 
 
 * Clone the repository, replace <institution> with the actual name of your institution e.g muk, kyu, renu, umu
