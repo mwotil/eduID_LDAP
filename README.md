@@ -104,7 +104,7 @@ TCP 636
 
 LAM is a webfront end for LDAP with a rich feature set (https://www.ldap-account-manager.org/)
 
-* Enable the 'lam' role by uncommenting it in ldap.yml
+* Enable the 'lam' role by uncommenting it in group_vars/<institution>
 * (Re)Play the playbook
 * Go to https://{{ fqdn}}
 
