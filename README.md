@@ -48,7 +48,7 @@
 
 * Clone the repository, replace <institution> with the actual name of your institution e.g muk, kyu, renu, umu
 
-        git clone  https://github.com/ubuntunet/unIDa_LDAP.git <institution>-ldap
+        git clone  https://github.com/mwotil/eduID_LDAP.git <institution>-ldap
         cd <institution>-ldap
 
 ### Inventory File
